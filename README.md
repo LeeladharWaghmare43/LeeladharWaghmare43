@@ -1,187 +1,238 @@
 <div align="center">
+  
+# 🎮 Leeladhar Waghmare
+### Game QA Tester (Entry-Level)
 
-# 🎮 Game QA Testing Portfolio  
-### Leeladhar Waghmare
-
-Entry-Level Game QA Tester passionate about improving gameplay quality, identifying bugs, and enhancing player experience.
-
-📍 Nagpur, India  
-📧 leeladharwaghmare43@gmail.com  
-📱 +91 8421684071  
+[![Email](https://img.shields.io/badge/leeladharwaghmare43%40gmail.com-red?style=flat-square&logo=gmail)](mailto:leeladharwaghmare43@gmail.com)
+[![Phone](https://img.shields.io/badge/+91%208421684071-green?style=flat-square&logo=whatsapp)](tel:+918421684071)
+[![Location](https://img.shields.io/badge/Nagpur%2C%20India-blue?style=flat-square&logo=googlemaps)](https://maps.google.com/?q=Nagpur,India)
 
 </div>
 
 ---
 
-# 👋 About Me
+## 👋 About Me
 
-I am an aspiring **Game QA Tester** with hands-on experience testing **closed beta and early-access games**. My focus is on identifying gameplay issues, documenting reproducible bugs, and validating fixes through structured testing.
+Aspiring Game QA Tester with hands-on experience testing **closed beta and early-access games**. I love finding bugs that others miss and helping developers create polished gaming experiences.
 
-I enjoy breaking games in order to help developers ship **stable, polished experiences for players**.
-
-My testing approach focuses on:
-
-- 🧪 Manual Testing  
-- 🔍 Exploratory Testing  
-- 🐞 Bug Reporting  
-- 🔁 Regression Testing  
-- 🎮 Gameplay Analysis  
+**What drives me:**
+- 🎯 Breaking games to make them better
+- 📝 Clear bug documentation that helps developers fix issues fast
+- 👥 Being part of the game development process
 
 ---
 
-# 🛠 QA Skills
+## 🛠️ QA Toolkit
 
-| Category | Skills |
-|--------|--------|
-| Testing | Manual Testing, Exploratory Testing, Functional Testing, Regression Testing |
-| Bug Tracking | Bug Identification, Reproduction Steps, Severity vs Priority |
-| Tools | JIRA (Basic), Google Sheets, MS Excel |
-| Technical | C (Basic), C++ (Basic), Python (Basic), SDLC Fundamentals |
-| Platforms | PC Games, Mobile Games (Android) |
-
----
-
-# 🎮 Games Tested
-
-| Game | Platform | Testing Type |
-|-----|------|------|
-| Rainbow Six Mobile | Mobile | Closed Beta Testing |
-| Ubisoft Resurgence | Mobile | Gameplay & UI Testing |
-| XDefiant | PC | Gameplay & Stability Testing |
-| Google Play Games on PC | PC | Beta Platform Testing |
+| Area | What I Know |
+|------|-------------|
+| **Testing Types** | Manual Testing • Exploratory Testing • Functional Testing • Regression Testing |
+| **Bug Reporting** | Writing clear steps • Taking screenshots • Recording gameplay • JIRA basics |
+| **Tools** | Google Sheets • MS Excel • OBS for recording • JIRA (learning) |
+| **Technical** | Basic C/C++/Python • SDLC fundamentals • PC hardware knowledge |
+| **Platforms** | PC Games • Android Games |
 
 ---
 
-# 🐞 Sample Bug Report
+## 🎮 Games I've Tested
 
-### Bug Title
-Character stuck inside wall after dash ability
-
-**Environment**
-
-Device: Pixel 6  
-OS: Android 14  
-Game Version: 1.0.4
-
-**Steps to Reproduce**
-
-1. Start dungeon level 3  
-2. Use dash ability near wall corner  
-3. Character clips into wall  
-
-**Expected Result**
-
-Character stops at wall collision boundary.
-
-**Actual Result**
-
-Character becomes stuck inside wall and cannot move.
-
-**Severity**
-
-High
-
-**Priority**
-
-Medium
+| Game | Platform | What I Did |
+|------|----------|------------|
+| **Rainbow Six Mobile** | Mobile (Beta) | Found 15+ bugs, tested controls, reported crashes |
+| **XDefiant** | PC (Beta) | Tested gameplay, reported memory issues |
+| **Ubisoft Resurgence** | Mobile (Beta) | UI testing, progression system checks |
+| **Google Play Games on PC** | PC (Beta) | Cross-platform compatibility testing |
 
 ---
 
-# ✅ Sample Test Case
+## 📝 Sample Bug Report
 
-**Feature:** Inventory System
+### 🐞 Character stuck inside wall after ability use
 
-**Test Case ID:** TC-INV-01
+```
+GAME: Rainbow Six Mobile
+BUILD: 2.1.4-beta
+DEVICE: Pixel 6 (Android 14)
 
-| Step | Action |
-|----|----|
-| 1 | Open inventory |
-| 2 | Select weapon |
-| 3 | Press equip |
+STEPS TO REPRODUCE:
+1. Select Sledge operator on Bank map
+2. Go to basement destructible wall
+3. Use breach charge and immediately dash through
+4. Try to move
 
-**Expected Result**
+WHAT SHOULD HAPPEN:
+Character moves freely through the opening
 
-- Weapon equipped to character  
-- Attack stat updated correctly  
+WHAT ACTUALLY HAPPENS:
+❌ Character gets stuck inside wall
+❌ Cannot move or use abilities
+❌ Have to restart game
 
----
+SEVERITY: 🔴 Critical (game breaking)
+PRIORITY: 🔥 High
+FREQUENCY: Happens 8 out of 10 tries
 
-# 🔍 Gameplay Analysis Example
+ATTACHMENTS:
+- Screen recording attached
+- Screenshots included
 
-### Game: Clash Royale
-
-**Observations**
-
-- Early progression feels balanced but slows down significantly after Arena 6
-- UI feedback during chest unlocking could be clearer
-- Matchmaking sometimes pairs players with significantly higher card levels
-
-**Suggestions**
-
-- Improve matchmaking fairness by narrowing level gap
-- Provide clearer UI feedback for chest timers
-
----
-
-# 🔁 QA Testing Workflow
-
-
-Build Received
-↓
-Smoke Testing
-↓
-Exploratory Testing
-↓
-Bug Reporting
-↓
-Developer Fix
-↓
-Regression Testing
-↓
-Release Candidate
-
+NOTE: Only happens at 60+ FPS. 30 FPS works fine.
+```
 
 ---
 
-# 📊 Example Device Testing
+## ✅ Sample Test Case
 
-| Device | OS | Result |
-|------|------|------|
-| Pixel 6 | Android 14 | PASS |
-| Samsung S21 | Android 13 | Minor FPS Drop |
-| Redmi Note 11 | Android 12 | PASS |
+### Testing Inventory System
+
+```
+TEST CASE: TC-INV-01
+FEATURE: Equipping weapons
+
+BEFORE TESTING:
+- Player is logged in
+- Has at least 3 weapons in inventory
+
+STEPS TO TEST:
+1. Open inventory
+2. Select Common Pistol
+3. Click "Equip"
+4. Check character screen
+5. Unequip weapon
+6. Try with Rare Rifle
+7. Try with Epic Shotgun
+
+WHAT SHOULD HAPPEN:
+✓ Weapon appears on character
+✓ Stats update correctly
+✓ Unequip works properly
+
+WHAT ACTUALLY HAPPENED:
+✓ All worked except weapon clips through character model (reported as bug BUG-2024-001)
+
+STATUS: Partially Passed
+```
 
 ---
 
-# 📂 Repository Structure
+## 🔍 Simple Game Analysis Example
 
+### Clash Royale - Quick Observations
 
-Game-QA-Portfolio
+**What's Working Well:**
+- 👍 Early game (Arenas 1-3) feels balanced and fun
+- 👍 Tutorial teaches basics effectively
+
+**Issues Noticed:**
+- ⚠️ After Arena 6, matchmaking sometimes pairs me with players 2 levels higher
+- ⚠️ Chest unlock timer could be more visible
+- ⚠️ Progression feels slow in Arenas 7-8
+
+**Simple Suggestions:**
+- Improve matchmaking to consider card levels more
+- Add progress bar for chest timers
+- Slightly increase gold rewards in mid-game
+
+---
+
+🔄 QA TESTING WORKFLOW
+
+```mermaid
+flowchart TD
+    A[📦 Build Received] --> B[🚦 Smoke Testing]
+    B -->|PASS| C[📝 Test Case Execution]
+    B -->|FAIL| D[⛔ Block Build]
+    D --> A
+    
+    C --> E[🔍 Exploratory Testing]
+    E --> F[🐛 Bug Detection]
+    F --> G[📋 Bug Documentation]
+    G --> H[📊 Severity/Priority Assignment]
+    H --> I[📤 Submit to Dev Team]
+    
+    I --> J[👨‍💻 Developer Fix]
+    J --> K[🔄 Regression Testing]
+    K -->|FAIL| J
+    K -->|PASS| L[📦 Release Candidate]
+    
+    L --> M[📈 Performance Testing]
+    L --> N[📱 Compatibility Testing]
+```
+
+📱 DEVICE TESTING MATRIX
+**Simple Breakdown:**
+1. **Smoke Test** → Check if game opens and runs
+2. **Explore** → Play naturally, try to break things
+3. **Found bug?** → Document clearly with steps
+4. **Report** → Send to dev team
+5. **Test fixes** → Check if bug is really gone
+6. **Repeat** → Keep testing until build is stable
+
+---
+
+## 📱 Devices I've Tested On
+
+| Device | Android | Performance |
+|--------|---------|-------------|
+| Pixel 6 | 14 | ✅ Smooth |
+| Samsung S21 | 13 | ⚠️ Minor lag at times |
+| Redmi Note 11 | 12 | ✅ Works well |
+| Moto G60 | 11 | ⚠️ Some crashes fixed |
+
+---
+
+## 📂 Portfolio Contents
+
+```
+📁 Game-QA-Portfolio/
 │
-├── Bug Reports
-│ ├── movement-bug.md
-│ ├── ui-navigation-bug.md
-│
-├── Test Cases
-│ ├── inventory-system-tests.md
-│ ├── matchmaking-tests.md
-│
-├── Gameplay Analysis
-│ ├── clash-royale-analysis.md
-│
-└── README.md
-
+├── 📄 README.md                    ← You are here
+├── 📁 Bug-Reports/                  ← Sample bugs I found
+├── 📁 Test-Cases/                   ← How I test features
+├── 📁 Game-Analysis/                 ← My observations
+└── 📁 Screenshots/                   ← Bug evidence
+```
 
 ---
 
-# 🚀 Career Goal
+## 🎯 What I'm Looking For
 
-To contribute to a professional **game development team** where I can help improve game stability, player experience, and overall product quality through structured QA testing.
+**First job in game QA** where I can:
+- 🎮 Test real games launching to players
+- 📈 Learn from experienced QA professionals
+- 🔍 Grow my bug-hunting skills
+- 🤝 Help make games better
+
+**Open to:**
+- Full-time QA Tester roles
+- Internships
+- Contract testing work
+- Remote or onsite in Nagpur
+
+---
+
+## ⚡ Quick Facts
+
+| | |
+|---|---|
+| **Available** | Immediately |
+| **Work Type** | Full-time / Internship |
+| **Location** | Nagpur (open to remote) |
+| **Languages** | English, Hindi, Marathi |
+| **Hobbies** | Gaming, Breaking games, Learning new testing tricks |
 
 ---
 
 <div align="center">
 
-⭐ If you're a recruiter or developer, feel free to explore the repository.
+### 📬 Let's Connect!
+
+**Email:** leeladharwaghmare43@gmail.com  
+**Phone:** +91 8421684071  
+
+*"Every bug found is one less frustration for players."*
+
+⭐ Feel free to check out my sample bug reports in this repository!
 
 </div>
+```
